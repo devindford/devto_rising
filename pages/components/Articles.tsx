@@ -78,36 +78,4 @@ const Articles = ({ data }) => {
   );
 };
 
-// canonical_url: "https://dev.to/somanathgoudar/build-a-password-generator-with-react-js-react-toastify-beginners-tutorial-4a9n"
-// collection_id: null
-// comments_count: 3
-// cover_image: null
-// created_at: "2021-03-23T08:06:51Z"
-// crossposted_at: null
-// description: "I have also added react toastify notifications in this project.  Build Password Generator using R..."
-// edited_at: null
-// id: 642842
-// last_comment_at: "2021-03-24T05:34:16Z"
-// path: "/somanathgoudar/build-a-password-generator-with-react-js-react-toastify-beginners-tutorial-4a9n"
-// positive_reactions_count: 26
-// public_reactions_count: 26
-// published_at: "2021-03-23T08:06:51Z"
-// published_timestamp: "2021-03-23T08:06:51Z"
-// readable_publish_date: "Mar 23"
-// slug: "build-a-password-generator-with-react-js-react-toastify-beginners-tutorial-4a9n"
-// social_image: "https://dev.to/social_previews/article/642842.png"
-// tag_list: (4) ["javascript", "react", "beginners", "tutorial"]
-// tags: "javascript, react, beginners, tutorial"
-// title: "Build A Password Generator with React JS - react-toastify - Beginners Tutorial"
-// type_of: "article"
-// url: "https://dev.to/somanathgoudar/build-a-password-generator-with-react-js-react-toastify-beginners-tutorial-4a9n"
-// user:
-// {github_username: "somanath-goudar"
-// name: "Somanath Goudar"
-// profile_image: "https://res.cloudinary.com/practicaldev/image/fetch/s--N-9hK7o1--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/600953/fdee0195-6d25-410d-9d97-c10ffaa4eb7d.jpeg"
-// profile_image_90: "https://res.cloudinary.com/practicaldev/image/fetch/s--avOm0Oam--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/600953/fdee0195-6d25-410d-9d97-c10ffaa4eb7d.jpeg"
-// twitter_username: null
-// username: "somanathgoudar"
-// website_url: null}
-
 export default Articles;
