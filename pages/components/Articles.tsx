@@ -7,7 +7,7 @@ const Articles = ({ data }) => {
         return (
           <div key={devto.id} className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-md mx-3 my-4 flex-wrap justify-between'>
             <img className='rounded-lg w-10/12 max-h-44 py-4 mx-auto' alt={devto.user.name} src={devto.social_image} />
-            <a href={devto.url} target='_blank' rel='noopener noreferrer' className='text-lg font-medium text-purple-400 text-center w-10/12 mx-auto hover:text-purple-600' title={devto.url}>
+            <a href={devto.url} target='_blank' rel='noopener noreferrer' className='text-lg font-medium text-purple-400 text-center w-10/12 mx-auto hover:text-purple-600 hover:underline' title={devto.url}>
               {devto.title}
             </a>
             <div className='flex items-center w-10/12 justify-between my-3 mx-auto'>
@@ -16,13 +16,13 @@ const Articles = ({ data }) => {
 
                 <div className='flex items-center py-2'>
                   {devto.user.twitter_username && (
-                    <a href={`https://twitter.com/${devto.user.twitter_username}`} target='_blank' rel='noopener noreferrer' title={`https://twitter.com/${devto.user.twitter_username}`} className='hover:shadow-xl'>
-                      <img className='rounded-full w-6  mr-4 flex items-center justify-center' src='/twitter_icon.png' alt='twitter bird' />
+                    <a href={`https://twitter.com/${devto.user.twitter_username}`} target='_blank' rel='noopener noreferrer' title={`https://twitter.com/${devto.user.twitter_username}`}>
+                      <img className='w-6  mr-4 flex' src='/twitter_icon.png' alt='twitter bird' />
                     </a>
                   )}
                   {devto.user.github_username && (
-                    <a href={`https://github.com/${devto.user.github_username}`} target='_blank' rel='noopener noreferrer' title={`https://twitter.com/${devto.user.twitter_username}`} className='hover:shadow-xl'>
-                      <img className='rounded-full w-6 flex items-center justify-center' src='/github_icon.png' alt='github cat' />
+                    <a href={`https://github.com/${devto.user.github_username}`} target='_blank' rel='noopener noreferrer' title={`https://twitter.com/${devto.user.twitter_username}`}>
+                      <img className=' w-6 flex' src='/github_icon.png' alt='github cat' />
                     </a>
                   )}
                 </div>

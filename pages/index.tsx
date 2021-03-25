@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import { QueryClient, useQuery, QueryClientProvider } from 'react-query';
+import { useQuery } from 'react-query';
+import Footer from './components/Footer';
 import Articles from './components/Articles';
-import { ReactQueryDevtools } from 'react-query-devtools';
+import Header from './components/Header';
+import React from 'react';
 
 const toJSON = (_: Response) => _.json();
 const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
@@ -21,9 +23,11 @@ export default function Home() {
     <div className='bg-purple-200'>
       <Head>
         <title>Dev.to-rising!</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/dev-ecosystem.png' />
       </Head>
+      <Header />
       <Articles data={data} />
+      <Footer />
     </div>
   );
 }
