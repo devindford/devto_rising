@@ -4,7 +4,7 @@ This application was built to test the [devto](https://dev.to) API.
 
 Live site: [devtorising.com](https://devtorising.com)
 
-Demo: ![devto rising demo](https://imgur.com/8Qlz1O3.gif)
+Demo: ![devto rising demo](https://imgur.com/K1HZELa.gif)
 
 ## What I used to build this application
 
