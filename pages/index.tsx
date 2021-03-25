@@ -4,7 +4,7 @@ import Articles from './components/Articles';
 import { ReactQueryDevtools } from 'react-query-devtools';
 
 const toJSON = (_: Response) => _.json();
-const fetcher = () => fetch(`https://dev.to/api/articles?state=rising`).then(toJSON);
+const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
 
 export default function Home() {
   const { data, isLoading, error } = useQuery('devToData', fetcher);
@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className='bg-purple-200'>
       <Head>
         <title>Dev.to-rising!</title>
         <link rel='icon' href='/favicon.ico' />
