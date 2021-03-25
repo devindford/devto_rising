@@ -2,12 +2,17 @@
 
 This application was built to test the [devto](https://dev.to) API.
 
+Live site: [devtorising.com](https://devtorising.com)
+
+Demo: <img alt="devto rising demo" src="/public/demo.gif" width="500px">
+
 ## What I used to build this application
 
-- Next
+- Next 😍
 - TypeScript
 - Tailwinds
-- React Query
+- PostCSS
+- React Query ❤️
 
 ## Run in your local environment
 
@@ -27,4 +32,4 @@ This application was built to test the [devto](https://dev.to) API.
 - Custom loading and 404 screens
 - Better error handling
 
-### If you like this project or want to contact me please reach out on twitter! [@DevinDFord](https://twitter.com/devindford)
+### If you like this project or want to contact me please reach out on twitter! [@DevinDFord 🐦](https://twitter.com/devindford)
