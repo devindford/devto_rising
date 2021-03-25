@@ -1,5 +1,6 @@
-import '../styles/globals.css';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from "react-query";
+import "tailwindcss/tailwind.css";
+import "../styles/globals.css";
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
