@@ -10,7 +10,7 @@ const Articles = ({ data }) => {
             className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-md mx-3 my-4 flex-wrap justify-between'
           >
             <img
-              className='rounded-lg w-10/12 max-h-44 py-4 mx-auto'
+              className='rounded-lg w-10/12 py-4 mx-auto'
               alt={devto.user.name}
               src={devto.social_image}
             />
@@ -53,6 +53,7 @@ const Articles = ({ data }) => {
               <img
                 className='rounded-full w-12 flex items-center justify-center'
                 src={devto.user.profile_image_90}
+                alt='profile image'
               />
             </div>
             <div className='flex justify-evenly w-10/12 mx-auto flex-wrap'>
