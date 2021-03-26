@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
 const Articles = ({ data }) => {
@@ -18,7 +18,7 @@ const Articles = ({ data }) => {
               href={devto.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='transition duration-200 ease-in-out text-lg font-medium text-purple-400 text-center w-10/12 mx-auto hover:text-white hover:underline'
+              className='transition duration-200 ease-in-out text-lg font-medium text-purple-400 w-10/12 mx-auto hover:text-white hover:underline'
               title={devto.url}
             >
               {devto.title}
