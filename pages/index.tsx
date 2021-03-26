@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <div className='bg-purple-200'>
+    <div className='bg-purple-900 '>
       <Head>
         <title>dev.to Rising!</title>
         <link rel='icon' href='/dev-ecosystem.png' />

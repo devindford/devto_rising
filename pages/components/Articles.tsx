@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 const Articles = ({ data }) => {
   return (
@@ -7,18 +8,17 @@ const Articles = ({ data }) => {
         return (
           <div
             key={devto.id}
-            className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-md mx-3 my-4 flex-wrap justify-between'
+            className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-sm mx-3 my-4 flex-wrap justify-between border-white border-solid border'
           >
-            <img
-              className='rounded-lg w-10/12 py-4 mx-auto'
-              alt={devto.user.name}
-              src={devto.social_image}
-            />
+            <div className='w-10/12 py-4 mx-auto'>
+              <img className='rounded-lg w-full' alt={devto.user.name} src={devto.social_image} />
+            </div>
+
             <a
               href={devto.url}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-lg font-medium text-purple-400 text-center w-10/12 mx-auto hover:text-purple-600 hover:underline'
+              className='transition duration-200 ease-in-out text-lg font-medium text-purple-400 text-center w-10/12 mx-auto hover:text-white hover:underline'
               title={devto.url}
             >
               {devto.title}
@@ -35,7 +35,7 @@ const Articles = ({ data }) => {
                       rel='noopener noreferrer'
                       title={`https://twitter.com/${devto.user.twitter_username}`}
                     >
-                      <img className='w-6  mr-4 flex' src='/twitter_icon.png' alt='twitter bird' />
+                      <img className='w-6  mr-4 flex ' src='/twitter_icon.png' alt='twitter bird' />
                     </a>
                   )}
                   {devto.user.github_username && (
@@ -58,7 +58,10 @@ const Articles = ({ data }) => {
             </div>
             <div className='flex justify-evenly w-10/12 mx-auto flex-wrap'>
               {devto.tag_list.map((tag) => (
-                <div className='inline-flex justify-between items-center px-3 font-medium text-white shadow-md rounded-full bg-purple-600 text-s mt-1'>
+                <div
+                  key={uuid()}
+                  className='inline-flex justify-between items-center px-2 py-1 font-medium text-white rounded-full bg-purple-800 text-xs mt-2'
+                >
                   {tag}
                 </div>
               ))}
