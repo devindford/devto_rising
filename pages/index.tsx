@@ -3,9 +3,11 @@ import { useQuery } from 'react-query';
 import Footer from './components/Footer';
 import Articles from './components/Articles';
 import Header from './components/Header';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { sortAscending, sortDescending } from '../utils/helperFunctions';
-import Dropdown from './components/Dropdown';
+
+
+
 
 const toJSON = (_: Response) => _.json();
 const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
