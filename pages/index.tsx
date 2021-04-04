@@ -31,7 +31,7 @@ export default function Home() {
         <link rel='icon' href='/dev-ecosystem.png' />
       </Head>
       <Header setSelectedValue={setSelectedValue} />
-      {selectedValue === 'unsorted' && <Articles data={data.reverse()} />}
+      {selectedValue === 'unsorted' && <Articles data={data} />}
       {selectedValue === 'descending' && <Articles data={sortDescending(data)} />}
       {selectedValue === 'ascending' && <Articles data={sortAscending(data)} />}
       <Footer />
