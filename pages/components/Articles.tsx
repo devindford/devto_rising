@@ -8,7 +8,7 @@ const Articles = ({ data, sortingOrder, setSortingOrder }) => {
   const [inputValue, setInputValue] = useState<string>('');
 
   return (
-    <section className=' max-w-screen-2xl mx-auto 2xl:px-0 px-4'>
+    <section className=' max-w-screen-2xl w-full mx-auto 2xl:px-0 px-4'>
       <div className='min-h-full h-full'>
         <SearchBox
           inputValue={inputValue}
