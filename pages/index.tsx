@@ -10,16 +10,18 @@ export default function Home() {
   const [sortingOrder, setSortingOrder] = useState<string>('');
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Head>
-        <title>dev.to Rising!</title>
-        <link rel='icon' href='/dev-ecosystem.png' />
-      </Head>
-      <div className='bg-purple-900 min-h-screen flex flex-col justify-start'>
-        <Header setSortingOrder={setSortingOrder} />
-        <Articles sortingOrder={sortingOrder} />
-        <Footer />
-      </div>
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <Head>
+          <title>dev.to Rising!</title>
+          <link rel='icon' href='/dev-ecosystem.png' />
+        </Head>
+        <div className='bg-purple-900 min-h-screen flex flex-col justify-start'>
+          <Header setSortingOrder={setSortingOrder} />
+          <Articles sortingOrder={sortingOrder} />
+          <Footer />
+        </div>
+      </QueryClientProvider>
+    </>
   );
 }
