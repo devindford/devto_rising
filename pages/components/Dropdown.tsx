@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Dropdown = ({ setSelectedValue }) => {
+const Dropdown = ({ setSortingOrder }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState({ img: '/unsorted.svg', text: 'Unsorted' });
   return (
@@ -51,7 +51,7 @@ const Dropdown = ({ setSelectedValue }) => {
                 className='flex items-center text-purple-900 font-semibold'
                 onClick={() => {
                   setSelected({ img: '/up_arrow.svg', text: 'Ascending' });
-                  setSelectedValue('ascending');
+                  setSortingOrder('asc');
                   setOpen(!open);
                 }}
               >
@@ -68,7 +68,7 @@ const Dropdown = ({ setSelectedValue }) => {
                 className='flex items-center text-purple-900 font-semibold'
                 onClick={() => {
                   setSelected({ img: '/down_arrow.svg', text: 'Descending' });
-                  setSelectedValue('descending');
+                  setSortingOrder('desc');
                   setOpen(!open);
                 }}
               >

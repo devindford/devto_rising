@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import { sortList } from '../../utils/helperFunctions';
 import SearchBox from './SearchBox';
 
-const Articles = ({ data }) => {
+const Articles = ({ data, sortingOrder, setSortingOrder }) => {
   const [searchValue, setSearchValue] = useState<string>('');
   const [inputValue, setInputValue] = useState<string>('');
 
@@ -17,6 +18,7 @@ const Articles = ({ data }) => {
         <div className='xl:justify-between 2xl:justify-center grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 col-span-1 grid-rows-3 justify-items-center'>
           {data
             ?.filter((d) => d.tags.includes(`${searchValue}`))
+            .sort((a, b) => sortList(a, b, sortingOrder))
             .map((devto) => {
               return (
                 <div

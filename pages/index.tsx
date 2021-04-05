@@ -4,13 +4,13 @@ import Footer from './components/Footer';
 import Articles from './components/Articles';
 import Header from './components/Header';
 import React, { useState } from 'react';
-import { sortAscending, sortDescending } from '../utils/helperFunctions';
 
 const toJSON = (_: Response) => _.json();
 const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
 
 export default function Home() {
   const { data, isLoading, error, isFetching } = useQuery('devToData', fetcher);
+  const [sortingOrder, setSortingOrder] = useState<string>('');
 
   if (isLoading || isFetching) {
     return <h2>Loading...</h2>;
@@ -27,8 +27,8 @@ export default function Home() {
         <link rel='icon' href='/dev-ecosystem.png' />
       </Head>
       <div className='bg-purple-900 min-h-screen flex flex-col justify-start'>
-        <Header />
-        <Articles data={data} />
+        <Header sortingOrder={sortingOrder} setSortingOrder={setSortingOrder} />
+        <Articles data={data} sortingOrder={sortingOrder} setSortingOrder={setSortingOrder} />
         <Footer />
       </div>
     </>

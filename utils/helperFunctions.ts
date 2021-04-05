@@ -1,7 +1,13 @@
-export const sortAscending = (data) => {
-  return data.sort((a, b) => a.positive_reactions_count - b.positive_reactions_count);
-};
-
-export const sortDescending = (data) => {
-  return data.sort((a, b) => a.positive_reactions_count - b.positive_reactions_count).reverse();
+export const sortList = (a, b, sortingOrder) => {
+  switch (sortingOrder) {
+    case 'asc': {
+      return a.positive_reactions_count - b.positive_reactions_count;
+    }
+    case 'desc': {
+      return b.positive_reactions_count - a.positive_reactions_count;
+    }
+    default: {
+      return '';
+    }
+  }
 };
