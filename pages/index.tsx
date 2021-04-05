@@ -4,9 +4,9 @@ import Footer from './components/Footer';
 import Articles from './components/Articles';
 import Header from './components/Header';
 import React, { useState } from 'react';
-const queryClient = new QueryClient();
 
 export default function Home() {
+  const queryClient = new QueryClient();
   const [sortingOrder, setSortingOrder] = useState<string>('');
 
   return (
