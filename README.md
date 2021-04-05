@@ -23,9 +23,9 @@ Live site: [devtorising.com](https://devtorising.com)
 (these are in no particular order)
 
 - Pagination
-- Dark and Light modes
+- ~~Search by tags~~ ✅
 - Article filters
-- Sort by number of reactions or comments_count
+- ~~Sort by number of reactions~~ ✅
 - Better mobile experience
 - Custom loading and 404 screens
 - Better error handling
