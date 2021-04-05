@@ -1,11 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useQuery } from 'react-query';
 import { v4 as uuid } from 'uuid';
 import { sortList } from '../../utils/helperFunctions';
 import SearchBox from './SearchBox';
 
-const Articles = ({ data, sortingOrder, setSortingOrder }) => {
+const Articles = ({ sortingOrder }) => {
+  const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
+  const toJSON = (_: Response) => _.json();
   const [searchValue, setSearchValue] = useState<string>('');
   const [inputValue, setInputValue] = useState<string>('');
+  const { data, isLoading, error, isFetching } = useQuery('devToData', fetcher, {
+    staleTime: Infinity,
+  });
+
+  if (isLoading || isFetching) {
+    return <h2>Loading...</h2>;
+  }
+  if (error) {
+    console.error(error);
+    return <h2>Error...</h2>;
+  }
 
   return (
     <section className=' max-w-screen-2xl w-full mx-auto 2xl:px-0 px-4'>
