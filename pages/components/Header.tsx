@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from './Dropdown';
 
-const Header = ({ sortingOrder, setSortingOrder }) => {
+const Header = ({ setSortingOrder }) => {
   return (
     <header className='sm:sticky relative top-0  bg-gradient-to-r from-purple-900 via-purple-600 to-purple-900 border-b-2 border-white shadow-lg  py-2  w-full'>
       <div className='max-w-screen-2xl  mx-auto 2xl:px-0 px-4 w-full flex md:flex-row flex-col items-center md:justify-between justify-center flex-wrap'>
