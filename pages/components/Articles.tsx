@@ -15,7 +15,7 @@ const Articles = ({ data, sortingOrder, setSortingOrder }) => {
           setInputValue={setInputValue}
           setSearchValue={setSearchValue}
         />
-        <div className='xl:justify-between 2xl:justify-center grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 col-span-1 grid-rows-3 justify-items-center'>
+        <div className='xl:justify-between 2xl:justify-center grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 col-span-1 justify-items-center'>
           {data
             ?.filter((d) => d.tags.includes(`${searchValue}`))
             .sort((a, b) => sortList(a, b, sortingOrder))
