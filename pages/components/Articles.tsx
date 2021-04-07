@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import { v4 as uuid } from 'uuid';
 import { sortList } from '../../utils/helperFunctions';
 import SearchBox from './SearchBox';
+import ReactLoading from 'react-loading';
 
 const Articles = ({ sortingOrder }) => {
   const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
@@ -14,7 +15,12 @@ const Articles = ({ sortingOrder }) => {
   });
 
   if (isLoading || isFetching) {
-    return <h2>Loading...</h2>;
+    return (
+      <div className='flex flex-col justify-center mt-auto content-center items-center h-full w-full'>
+        <ReactLoading type='bars' color='#ddd6fe' width={'100px'} />
+        <div className='text-2xl text-purple-200 mt-6'>Loading...</div>
+      </div>
+    );
   }
   if (error) {
     console.error(error);
