@@ -5,7 +5,6 @@ import { sortList, toJSON } from '../utils/helperFunctions';
 import SearchBox from './SearchBox';
 import ReactLoading from 'react-loading';
 import { DevToData } from '../utils/types';
-import Image from 'next/image';
 
 const Articles = ({ sortingOrder }) => {
   const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
@@ -48,11 +47,10 @@ const Articles = ({ sortingOrder }) => {
                   className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-sm mx-3 my-4 flex-wrap justify-between border-white border-solid border'
                 >
                   <div className='w-10/12 py-4 mx-auto'>
-                    <Image
+                    <img
                       className='rounded-lg w-full'
                       alt={devto.user.name}
                       src={devto.social_image}
-                      layout='intrinsic'
                       width='350'
                       height='175'
                     />
@@ -80,10 +78,9 @@ const Articles = ({ sortingOrder }) => {
                             className='mr-3'
                             title={`https://twitter.com/${devto.user.twitter_username}`}
                           >
-                            <Image
+                            <img
                               src='/twitter_icon.png'
                               alt='twitter bird'
-                              layout='intrinsic'
                               width='24'
                               height='24'
                             />
@@ -96,22 +93,15 @@ const Articles = ({ sortingOrder }) => {
                             rel='noopener noreferrer'
                             title={`https://twitter.com/${devto.user.twitter_username}`}
                           >
-                            <Image
-                              src='/github_icon.png'
-                              alt='github cat'
-                              layout='intrinsic'
-                              width='24'
-                              height='24'
-                            />
+                            <img src='/github_icon.png' alt='github cat' width='24' height='24' />
                           </a>
                         )}
                       </div>
                     </div>
-                    <Image
+                    <img
                       className='rounded-full w-12 flex items-center justify-center'
                       src={devto.user.profile_image_90}
                       alt='profile image'
-                      layout='intrinsic'
                       width='48'
                       height='48'
                     />
