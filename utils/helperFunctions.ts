@@ -7,7 +7,7 @@ export const sortList = (a, b, sortingOrder) => {
       return b.positive_reactions_count - a.positive_reactions_count;
     }
     default: {
-      return '';
+      return;
     }
   }
 };
