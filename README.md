@@ -27,7 +27,7 @@ Live site: [devtorising.com](https://devtorising.com)
 - Article filters
 - ~~Sort by number of reactions~~ ✅
 - Better mobile experience
-- Custom loading and 404 screens
+- ~~Custom loading screen~~ ✅
 - Better error handling
 
 ### If you like this project or want to contact me please reach out on twitter! [@DevinDFord 🐦](https://twitter.com/devindford)
