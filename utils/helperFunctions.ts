@@ -11,3 +11,5 @@ export const sortList = (a, b, sortingOrder) => {
     }
   }
 };
+
+export const toJSON = (_: Response) => _.json();
