@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { v4 as uuid } from 'uuid';
-import { sortList } from '../utils/helperFunctions';
+import { sortList, toJSON } from '../utils/helperFunctions';
 import SearchBox from './SearchBox';
 import ReactLoading from 'react-loading';
 import { DevToData } from '../utils/types';
+import Image from 'next/image';
 
 const Articles = ({ sortingOrder }) => {
   const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
-  const toJSON = (_: Response) => _.json();
   const [searchValue, setSearchValue] = useState<string>('');
   const [inputValue, setInputValue] = useState<string>('');
   const { data, isLoading, error, isFetching } = useQuery('devToData', fetcher, {
@@ -48,10 +48,13 @@ const Articles = ({ sortingOrder }) => {
                   className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-sm mx-3 my-4 flex-wrap justify-between border-white border-solid border'
                 >
                   <div className='w-10/12 py-4 mx-auto'>
-                    <img
+                    <Image
                       className='rounded-lg w-full'
                       alt={devto.user.name}
                       src={devto.social_image}
+                      layout='intrinsic'
+                      width='350'
+                      height='175'
                     />
                   </div>
 
@@ -74,12 +77,15 @@ const Articles = ({ sortingOrder }) => {
                             href={`https://twitter.com/${devto.user.twitter_username}`}
                             target='_blank'
                             rel='noopener noreferrer'
+                            className='mr-3'
                             title={`https://twitter.com/${devto.user.twitter_username}`}
                           >
-                            <img
-                              className='w-6  mr-4 flex '
+                            <Image
                               src='/twitter_icon.png'
                               alt='twitter bird'
+                              layout='intrinsic'
+                              width='24'
+                              height='24'
                             />
                           </a>
                         )}
@@ -90,15 +96,24 @@ const Articles = ({ sortingOrder }) => {
                             rel='noopener noreferrer'
                             title={`https://twitter.com/${devto.user.twitter_username}`}
                           >
-                            <img className=' w-6 flex' src='/github_icon.png' alt='github cat' />
+                            <Image
+                              src='/github_icon.png'
+                              alt='github cat'
+                              layout='intrinsic'
+                              width='24'
+                              height='24'
+                            />
                           </a>
                         )}
                       </div>
                     </div>
-                    <img
+                    <Image
                       className='rounded-full w-12 flex items-center justify-center'
                       src={devto.user.profile_image_90}
                       alt='profile image'
+                      layout='intrinsic'
+                      width='48'
+                      height='48'
                     />
                   </div>
                   <div className='flex justify-evenly w-10/12 mx-auto flex-wrap'>
