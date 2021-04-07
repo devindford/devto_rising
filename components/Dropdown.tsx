@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 
 const Dropdown = ({ setSortingOrder }) => {
   const [open, setOpen] = useState<boolean>(false);
@@ -12,7 +13,7 @@ const Dropdown = ({ setSortingOrder }) => {
           onClick={() => setOpen(!open)}
         >
           <span className='flex items-center text-purple-900 font-semibold'>
-            <img src={selected.img} alt='' className='flex-shrink-0 h-5 w-5 ' />
+            <Image src={selected.img} alt='burger menu' layout='intrinsic' width='25' height='25' />
             <span className='ml-5 block truncate'>{selected.text}</span>
           </span>
           <span className='ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
@@ -49,7 +50,14 @@ const Dropdown = ({ setSortingOrder }) => {
                   setOpen(!open);
                 }}
               >
-                <img src='/up_arrow.svg' alt='' className='flex-shrink-0 h-5 w-5 ' />
+                <Image
+                  src='/up_arrow.svg'
+                  alt=''
+                  className='flex-shrink-0 h-5 w-5 '
+                  layout='intrinsic'
+                  width='25'
+                  height='25'
+                />
                 <span className='ml-5 block truncate'>Ascending</span>
               </div>
             </li>
@@ -66,7 +74,14 @@ const Dropdown = ({ setSortingOrder }) => {
                   setOpen(!open);
                 }}
               >
-                <img src='/down_arrow.svg' alt='' className='flex-shrink-0 h-5 w-5 rounded-full' />
+                <Image
+                  src='/down_arrow.svg'
+                  alt=''
+                  className='flex-shrink-0 h-5 w-5 rounded-full'
+                  layout='intrinsic'
+                  width='25'
+                  height='25'
+                />
                 <span className='ml-5 block truncate'>Descending</span>
               </div>
             </li>

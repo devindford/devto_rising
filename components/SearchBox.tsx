@@ -5,7 +5,7 @@ function SearchBox({ inputValue, setSearchValue, setInputValue }) {
     <>
       <div className='flex mt-1 justify-start'>
         <div className='flex flex-col w-full md:w-52'>
-          <label id='search' className='text-purple-200 font-medium'>
+          <label id='tag search' className='text-purple-200 font-medium'>
             Search Tags
           </label>
           <div className='flex rounded-md shadow-sm'>
