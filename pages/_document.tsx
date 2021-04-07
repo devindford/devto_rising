@@ -1,5 +1,5 @@
-import Document, { Html, Main, NextScript } from 'next/document';
-import HeadWithArgs from '../components/HeadWithArgs';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -9,8 +9,8 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='en'>
-        <HeadWithArgs />
+      <Html lang='en-us'>
+        <Head />
         <body>
           <Main />
           <NextScript />
