@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Footer from './components/Footer';
-import Articles from './components/Articles';
-import Header from './components/Header';
+import Footer from '../components/Footer';
+import Articles from '../components/Articles';
+import Header from '../components/Header';
 import React, { useState } from 'react';
 
 export default function Home() {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { v4 as uuid } from 'uuid';
-import { sortList } from '../../utils/helperFunctions';
+import { sortList } from '../utils/helperFunctions';
 import SearchBox from './SearchBox';
 import ReactLoading from 'react-loading';
 
