@@ -9,7 +9,7 @@ function SearchBox({ inputValue, setSearchValue, setInputValue }) {
             Search Tags
           </label>
           <div className='flex rounded-md shadow-sm'>
-            <div className=' flex items-stretch flex-grow '>
+            <div className='flex items-stretch flex-grow'>
               <input
                 type='text'
                 name='search'
