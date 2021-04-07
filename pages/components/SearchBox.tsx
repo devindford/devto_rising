@@ -17,16 +17,9 @@ function SearchBox({ inputValue, setSearchValue, setInputValue }) {
                 value={inputValue}
                 className='focus:ring-indigo-500 focus:border-indigo-500 block w-full rounded-md pl-1.5 border sm:text-sm border-gray-300 h-8'
                 placeholder='Enter a tag name'
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    e.preventDefault();
-                    setSearchValue(e.currentTarget.value);
-                    setInputValue('');
-                  }
-                }}
                 onInput={(e) => {
                   setInputValue(e.currentTarget.value);
-                  setSearchValue(e.currentTarget.value);
+                  setSearchValue(e.currentTarget.value.toLowerCase());
                 }}
               />
             </div>
