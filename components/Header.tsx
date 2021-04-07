@@ -7,13 +7,7 @@ const Header = ({ setSortingOrder }) => {
       <div className='max-w-screen-2xl  mx-auto 2xl:px-0 px-4 w-full flex md:flex-row flex-col items-center md:justify-between justify-center flex-wrap'>
         <div className='flex flex-col sm:flex-row items-center text-purple-200'>
           <a href='http://dev.to' target='_blank' rel='noopener noreferrer' className='mr-2'>
-            <Image
-              src='/dev-ecosystem.png'
-              alt='Dev unofficial app'
-              layout='intrinsic'
-              width='80'
-              height='80'
-            />{' '}
+            <img src='/dev-ecosystem.png' alt='Dev unofficial app' width='80' height='80' />{' '}
           </a>
           <div className='text-4xl font-bold'>dev.to Rising!</div>
         </div>
