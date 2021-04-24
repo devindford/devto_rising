@@ -11,7 +11,7 @@ function HeadWithArgs() {
       <meta
         name='description'
         content='dev.to Rising! Displays the most recent rising articles from dev.to. Sort articles by tags, or comments and never miss an article that is gaining momentum in the dev community'
-      ></meta>
+      />
     </Head>
   );
 }
