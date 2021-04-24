@@ -51,6 +51,7 @@ const Articles = ({ sortingOrder }) => {
                       src={devto.social_image}
                       width='350'
                       height='175'
+                      layout='intrinsic'
                     />
                   </div>
 
