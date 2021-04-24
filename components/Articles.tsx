@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { v4 as uuid } from 'uuid';
 import { sortList, toJSON } from '../utils/helperFunctions';
 import SearchBox from './SearchBox';
 import ReactLoading from 'react-loading';
 import { DevToData } from '../utils/types';
+import Image from 'next/image';
+import Loader from './Loader';
 
 const Articles = ({ sortingOrder }) => {
   const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
@@ -16,13 +18,9 @@ const Articles = ({ sortingOrder }) => {
   const devToData = data as DevToData[] | undefined;
 
   if (isLoading || isFetching) {
-    return (
-      <div className='flex flex-col justify-center mt-auto content-center items-center h-full w-full'>
-        <ReactLoading type='bars' color='#ddd6fe' width={'100px'} />
-        <div className='text-2xl text-purple-200 mt-6'>Loading...</div>
-      </div>
-    );
+    return <Loader />;
   }
+
   if (error) {
     console.error(error);
     return <h2>Error...</h2>;
@@ -47,7 +45,7 @@ const Articles = ({ sortingOrder }) => {
                   className='flex flex-col bg-gray-800 shadow-sm p-2 rounded-lg max-w-sm mx-3 my-4 flex-wrap justify-between border-white border-solid border'
                 >
                   <div className='w-10/12 py-4 mx-auto'>
-                    <img
+                    <Image
                       className='rounded-lg w-full'
                       alt={devto.user.name}
                       src={devto.social_image}
@@ -98,7 +96,7 @@ const Articles = ({ sortingOrder }) => {
                         )}
                       </div>
                     </div>
-                    <img
+                    <Image
                       className='rounded-full w-12 flex items-center justify-center'
                       src={devto.user.profile_image_90}
                       alt='profile image'
