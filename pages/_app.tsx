@@ -6,9 +6,11 @@ ReactGA.initialize('UA-182972388-1');
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
+  // Google analytics
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <Component {...pageProps} />

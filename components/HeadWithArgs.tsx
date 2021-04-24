@@ -20,7 +20,6 @@ function HeadWithArgs() {
         property='og:image:alt'
         content='A website that is showing the top articles on the rise from dev.to'
       />
-
       <meta
         property='og:description'
         content='dev.to Rising! Displays the most recent rising articles from dev.to. Sort articles by tags, or comments and never miss an article that is gaining momentum in the dev community'
@@ -40,6 +39,7 @@ function HeadWithArgs() {
         content='A website that is showing the top articles on the rise from dev.to'
       />
       <meta name='twitter:creator' content='@devindford' />
+
     </Head>
   );
 }
