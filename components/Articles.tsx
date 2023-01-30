@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Loader from './Loader';
 
 const Articles = ({ sortingOrder }) => {
-  const fetcher = () => fetch(`https://dev.to/api/articles?state=rising&per_page=30`).then(toJSON);
+  const fetcher = () => fetch(`https://dev.to/api/articles?top=5`).then(toJSON);
   const [searchValue, setSearchValue] = useState<string>('');
   const [inputValue, setInputValue] = useState<string>('');
   const { data, isLoading, error, isFetching } = useQuery('devToData', fetcher, {
